@@ -11,11 +11,18 @@ jobs:
     name: Backport
     steps:
       - uses: actions/checkout@v2
-      - name: Backport
-        uses: peter-evans/create-pull-request@v3
-        with:
-          base: master
-          branch: develop
-          draft: true
+#      - name: Backport
+#        uses: peter-evans/create-pull-request@v3
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          base: master
+#          branch: develop
+#          draft: true
+#            # プルリクを作成する
+      - name: Create Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          hub pull-request -m "Github Actions からプルリクを出す" -b develop -h master
 
 
