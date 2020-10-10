@@ -11,4 +11,4 @@ module.exports = function fizzbuzz(value) {
   return String(value);
 };
 
-console.log('3')
+console.log('4')
