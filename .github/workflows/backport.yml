@@ -11,15 +11,13 @@ jobs:
     name: Backport
     steps:
       # hub コマンドをインストールする
-      - name: install hub
-        uses: geertvdc/setup-hub@v1.0.0
       - name: checkout
         uses: actions/checkout@v2
       - name: Create Pull Request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: ${github.event.pull_request.head.ref}
         run: |
-          hub pull-request -m "Github Actions からプルリクを出す" -b develop -h master
-          echo "branch name: ${github.event.pull_request.head.ref"
+          hub pull-request -m "Github Actions からプルリクを出す $BRANCH_NAME" -b develop -h master
 
 
