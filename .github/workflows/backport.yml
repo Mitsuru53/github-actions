@@ -1,9 +1,10 @@
 name: Backport
 on:
-  branches:
-    types:
-      - master
-      - staging
+  push:
+    branches:
+      types:
+        - master
+        - staging
 
 jobs:
   backport:
