@@ -1,10 +1,9 @@
 name: Backport
 on:
-  push:
+  pull_request:
     branches:
-      types:
-        - master
-        - staging
+      - master
+      - staging
 
 jobs:
   backport:
