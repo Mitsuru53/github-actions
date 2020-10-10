@@ -17,6 +17,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          hub pull-request -m "GITHUB_REF: ${{ github.event.pull_request.head }} GITHUB_BASE_REF:" -b develop -h master
+          hub pull-request -m "GITHUB_REF: ${{ github.event.pull_request.base.ref }} GITHUB_BASE_REF:" -b develop -h master
 
 
