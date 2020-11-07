@@ -1,6 +1,7 @@
 name: Backport
 on:
   pull_request:
+    types: closed
     branches:
       - master
       - staging
@@ -9,14 +10,18 @@ jobs:
   backport:
     runs-on: ubuntu-latest
     name: Backport
+    env:
+      BRANCH_NAME: ${{ github.event.pull_request.base.ref }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: Create Pull Request
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: ${{ github.event.pull_request.base.ref }}
-        run: |
-          hub pull-request -m "GITHUB_REF: $BRANCH_NAME" -b develop -h $BRANCH_NAME
+        uses: peter-evans/create-pull-request@v3
+#      - name: Create Pull Request
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          BRANCH_NAME: ${{ github.event.pull_request.base.ref }}
+#        run: |
+#          hub pull-request -m "GITHUB_REF: $BRANCH_NAME" -b develop -h $BRANCH_NAME
 
 

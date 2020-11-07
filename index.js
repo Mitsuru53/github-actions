@@ -10,3 +10,6 @@ module.exports = function fizzbuzz(value) {
   }
   return String(value);
 };
+
+console.log('9')
+
