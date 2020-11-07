@@ -18,7 +18,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: BRANCH_NAME
           base: develop
 #      - name: Create Pull Request
 #        env:
