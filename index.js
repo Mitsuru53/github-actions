@@ -8,6 +8,7 @@ module.exports = function fizzbuzz(value) {
   if (value % 5 === 0) {
     return "Buzz";
   }
+  console.error('staging')
   return String(value);
 };
 
