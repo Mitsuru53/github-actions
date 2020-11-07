@@ -19,7 +19,6 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           commit-message: Update report
-          committer: GitHub
           signoff: false
           title: '[Example] Update report'
           body: |
