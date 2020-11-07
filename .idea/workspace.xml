@@ -33,7 +33,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5fbe7c11-e7ef-4a21-b6bb-663f323f831c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/backport.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backport.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
