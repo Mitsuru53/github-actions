@@ -12,3 +12,4 @@ module.exports = function fizzbuzz(value) {
 };
 
 console.log('12')
+
